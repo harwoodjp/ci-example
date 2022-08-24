@@ -13,7 +13,9 @@ services:
   tests_with_code_climate:
     <<: *tests
     environment:
-      - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID    
+      - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
+      - GITHUB_SHA=$GITHUB_SHA
+      - GITHUB_REF_NAME=$GITHUB_REF_NAME
     volumes:
       # - .git:/app/.git  # will cause issues in GHA
       - ./app.py:/app/app.py
