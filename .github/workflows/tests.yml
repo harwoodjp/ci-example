@@ -9,6 +9,8 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    with:
+      GHA_CALL: ${{ secrets.GHA_CALL }}
     steps:
     - uses: actions/checkout@v3
     - name: Run pytest
