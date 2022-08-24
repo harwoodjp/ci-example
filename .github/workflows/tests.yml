@@ -10,8 +10,8 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - with: 
-      GHA_CALL: ${{ secrets.GHA_CALL }}
     - uses: actions/checkout@v3
     - name: Run pytest
       run: docker-compose run tests
+      with: 
+        GHA_CALL: ${{ secrets.GHA_CALL }}
