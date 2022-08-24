@@ -3,9 +3,10 @@
 
 * GHA for `pytest` with `docker-compose` test runner
 * GHA Secrets
-	* `***` in output
-	* Pass to `docker-compose`
-	* `GHA_CALL` = different behavior if executed in GHA context
-
-	`docker-compose run tests`
+	* Added `$GHA_CALL` to repo
+	* Logs as `***` in output
+	* Set `GHA_CALL=$GHA_CALL` in `docker-compose`
+	* `$GHA_CALL` = boolean for conditional behavior
+		* e.g. start instrumentation agent only in CI context
+* `docker-compose run tests`
 	
