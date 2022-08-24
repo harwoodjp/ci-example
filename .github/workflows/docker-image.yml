@@ -7,14 +7,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   tests:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
-    - name: Build image
-      run: docker build -t app .
     - name: Run pytest
-      run: docker run -t app bash -c "pytest app.py"
+      run: docker-compose run app
