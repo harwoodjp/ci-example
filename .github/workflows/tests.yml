@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run pytest
-      run: docker-compose run app
+      run: docker-compose run tests

@@ -1,4 +1,4 @@
-def reverse(key: str) -> str:
+def reverse(key: str) -> int:
 	return key[::-1]
 
 def test_reverse_pass() -> None:
