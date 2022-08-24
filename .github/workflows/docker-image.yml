@@ -17,6 +17,6 @@ jobs:
     - name: Build image
       run: docker build -t app .
     - name: Run pytest
-      run: |
+      run: >
         docker run -it app bash
         pytest app.py
