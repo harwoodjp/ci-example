@@ -4,7 +4,6 @@ services:
     image: python:3.8-slim-buster
     working_dir: /app
     environment:
-      - DEBUG=hello
       - GHA_CALL=$GHA_CALL
     volumes:
       - ./app.py:/app/app.py
