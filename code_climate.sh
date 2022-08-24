@@ -1,3 +1,8 @@
+echo "CC_TEST_REPORTER_ID: ${CC_TEST_REPORTER_ID}}"
+echo "GITHUB_SHA: ${GITHUB_SHA}}"
+echo "GITHUB_REF_NAME: ${GITHUB_REF_NAME}}"
+echo "GIT_BRANCH: ${GIT_BRANCH}}"
+
 apt-get update -y
 apt-get install curl git gpg -y
 curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter

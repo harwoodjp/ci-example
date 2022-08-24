@@ -16,6 +16,7 @@ services:
       - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
       - GITHUB_SHA=$GITHUB_SHA
       - GITHUB_REF_NAME=$GITHUB_REF_NAME
+      - GIT_BRANCH=$GIT_BRANCH
     volumes:
       # - .git:/app/.git  # will cause issues in GHA
       - ./app.py:/app/app.py
