@@ -6,5 +6,8 @@ def reverse(key: str) -> str:
 def test_reverse_pass() -> None:
 	assert reverse("foo") == "oof"
 
-def test_gha_variable() -> None:
-	assert os.environ["GHA_CALL"] == "Hello!"	
+def test_cc_reporter_not_null() -> None:
+	try:
+		os.environ.get("CC_TEST_REPORTER_ID")
+	except KeyError:
+		assert False
