@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run pytest
+      run: python -c 'import os;print(os.environ)'    
       env: 
         GHA_CALL: "Hello!"
-      run: docker-compose run tests
