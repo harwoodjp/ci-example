@@ -10,5 +10,9 @@
 	* Set `GHA_CALL=$GHA_CALL` in `docker-compose`
 	* `$GHA_CALL` = boolean for conditional behavior
 		* e.g. start instrumentation agent only in CI context
+* CodeClimate test coverage
+	* Start inspection before `pytest`, stop after
+	* Calculates % coverage
 * `docker-compose run tests`
-	
+* `docker-compose run tests_with_code_climate`
+
