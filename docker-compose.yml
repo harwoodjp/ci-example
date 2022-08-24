@@ -15,7 +15,7 @@ services:
     environment:
       - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID    
     volumes:
-      - .git:/app/.git      
+      # - .git:/app/.git  # will cause issues in GHA
       - ./app.py:/app/app.py
       - ./requirements.txt:/app/requirements.txt
       - ./code_climate.sh:/app/code_climate.sh
