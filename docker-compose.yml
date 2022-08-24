@@ -5,6 +5,7 @@ services:
     working_dir: /app
     environment:
       - DEBUG=hello
+      - GHA_CALL=$GHA_CALL
     volumes:
       - ./app.py:/app/app.py
       - ./requirements.txt:/app/requirements.txt
