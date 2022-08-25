@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run Pytest with CodeClimate inspection
-      run: pwd && ls -al
+      run: pwd && ls -al && sh code_climate.sh
       # run: docker-compose run tests_with_code_climate
       env: 
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
