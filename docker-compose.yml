@@ -11,7 +11,8 @@ services:
     # command: tail -f /dev/null # run indefinitely
 
   tests_with_code_climate:
-    <<: *tests
+    image: python:3.8-slim-buster
+    working_dir: /app
     environment:
       - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
       - GITHUB_SHA=$GITHUB_SHA
