@@ -19,7 +19,7 @@ services:
       - GIT_BRANCH=$GIT_BRANCH
     volumes:
       # - .git:/app/.git  # will cause issues in GHA
-      - ./app.py:/app/app.py
-      - ./requirements.txt:/app/requirements.txt
-      - ./code_climate.sh:/app/code_climate.sh
+      # - ./app.py:/app/app.py
+      # - ./requirements.txt:/app/requirements.txt
+      # - ./code_climate.sh:/app/code_climate.sh
     command: bash code_climate.sh
