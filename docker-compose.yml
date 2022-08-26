@@ -12,8 +12,8 @@ services:
 
   tests_with_code_climate:
     <<: *tests
-    # environment:
-      # - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
+    environment:
+      - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
     volumes:
       - ./:/app/
     command: bash code_climate.sh
