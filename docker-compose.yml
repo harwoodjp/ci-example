@@ -12,11 +12,8 @@ services:
 
   tests_with_code_climate:
     <<: *tests
-    environment:
-      - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
-      - GITHUB_SHA=$GITHUB_SHA
-      - GITHUB_REF_NAME=$GITHUB_REF_NAME
-      - GIT_BRANCH=$GIT_BRANCH
+    # environment:
+      # - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
     volumes:
       - ./:/app/
     command: bash code_climate.sh
