@@ -13,4 +13,4 @@ def test_cc_reporter_not_null() -> None:
 		assert False
 
 def test_failure() -> None:
-	assert True
+	assert False
