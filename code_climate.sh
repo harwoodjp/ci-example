@@ -19,6 +19,7 @@ fi
 chmod +x test-reporter-latest-linux-amd64
 pip3 install -r requirements.txt
 ./test-reporter-latest-linux-amd64 before-build
-pytest -x --cov=. --cov-report=xml --cov-report=term app.py
+pytest --cov=. --cov-report=xml --cov-report=term app.py
+exit 1
 cat coverage.xml
 ./test-reporter-latest-linux-amd64 after-build
