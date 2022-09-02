@@ -19,7 +19,11 @@ fi
 chmod +x test-reporter-latest-linux-amd64
 pip3 install -r requirements.txt
 ./test-reporter-latest-linux-amd64 before-build
-pytest --cov=. --cov-report=xml --cov-report=term app.py
-exit 1
+if pytest --cov=. --cov-report=xml --cov-report=term app.py)
+   then
+      echo "All passed"
+   else
+      echo "Tests failed" && exit 1
+fi
 cat coverage.xml
 ./test-reporter-latest-linux-amd64 after-build
