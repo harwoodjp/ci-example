@@ -23,4 +23,4 @@ pytest --cov=. --cov-report=xml --cov-report=term app.py
 pytest_exit_code=$?
 ./test-reporter-latest-linux-amd64 after-build
 echo $pytest_exit_code
-return $pytest_exit_code # pytest exit code
+exit $pytest_exit_code
