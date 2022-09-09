@@ -22,5 +22,4 @@ pip3 install -r requirements.txt
 pytest --cov=. --cov-report=xml --cov-report=term app.py
 pytest_exit_code=$?
 ./test-reporter-latest-linux-amd64 after-build
-echo $pytest_exit_code
 exit $pytest_exit_code
