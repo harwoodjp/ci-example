@@ -1,0 +1,14 @@
+name: Echo variables in GHA container
+
+on:
+  workflow_call:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo        
+        uses: actions/checkout@v2
+      - run: echo "github.ref - ${{ github.ref }}"
+      - run: echo "github.sha - ${{ github.sha }}"
+      - run: env
