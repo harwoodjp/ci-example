@@ -6,6 +6,6 @@ on:
 
 jobs:
   debug:
-    uses: './github/workflows/debug.yml'
+    uses: './.github/workflows/debug.yml'
   tests:
     uses: './.github/workflows/tests.yml'
