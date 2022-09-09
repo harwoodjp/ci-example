@@ -15,11 +15,4 @@ jobs:
       - run: env
 
   tests:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Run Pytest with CodeClimate inspection
-      # run: pwd && ls -al && sh code_climate.sh
-      run: docker-compose run tests_with_code_climate
-      env: 
-        CC_TEST_REPORTER_ID: 999f22364f1f655aa2703d1b519a3e6364588e118126bb60a77755af3b7951ef
+    uses: './.github/workflows/tests.yml'
