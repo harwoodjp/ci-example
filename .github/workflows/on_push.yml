@@ -6,13 +6,6 @@ on:
 
 jobs:
   debug:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repo        
-        uses: actions/checkout@v2
-      - run: echo "github.ref - ${{ github.ref }}"
-      - run: echo "github.sha - ${{ github.sha }}"
-      - run: env
-
+    uses: './github/workflows/debug.yml'
   tests:
     uses: './.github/workflows/tests.yml'
